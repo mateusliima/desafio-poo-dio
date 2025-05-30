@@ -1,6 +1,4 @@
-import br.com.dio.desafio.dominio.Conteudo;
-import br.com.dio.desafio.dominio.Curso;
-import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.*;
 
 import java.time.LocalDate;
 
@@ -23,7 +21,16 @@ public class Main {
 
         Conteudo conteudo = new Curso();
 
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp 1");
+        bootcamp.setDescricao("Descrição bootcamp java");
+        bootcamp.getConteudos().add(curso);
 
+        Dev dev = new Dev();
+        dev.setNome("Mateus");
+
+        dev.inscreverBootcamp(bootcamp);
+        System.out.println(dev.getConteudosInscritos());
 
         System.out.println(mentoria);
 
